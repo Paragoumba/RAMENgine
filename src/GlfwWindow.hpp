@@ -1,5 +1,5 @@
-#ifndef CONFINED_GLFWWINDOW_HPP
-#define CONFINED_GLFWWINDOW_HPP
+#ifndef RAMENGINE_GLFWWINDOW_HPP
+#define RAMENGINE_GLFWWINDOW_HPP
 
 #include <GLFW/glfw3.h>
 
@@ -20,4 +20,4 @@ private:
     GLFWwindow* handle;
 };
 
-#endif //CONFINED_GLFWWINDOW_HPP
+#endif //RAMENGINE_GLFWWINDOW_HPP

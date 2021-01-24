@@ -1,5 +1,5 @@
-#ifndef CONFINED_EXCEPTION_HPP
-#define CONFINED_EXCEPTION_HPP
+#ifndef RAMENGINE_EXCEPTION_HPP
+#define RAMENGINE_EXCEPTION_HPP
 
 #include <exception>
 
@@ -15,4 +15,4 @@ public:
     ~Exception() override;
 };
 
-#endif //CONFINED_EXCEPTION_HPP
+#endif //RAMENGINE_EXCEPTION_HPP

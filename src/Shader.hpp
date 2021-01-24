@@ -1,5 +1,5 @@
-#ifndef CONFINED_SHADER_HPP
-#define CONFINED_SHADER_HPP
+#ifndef RAMENGINE_SHADER_HPP
+#define RAMENGINE_SHADER_HPP
 
 #include <glad/glad.h>
 #include <glm/glm.hpp>
@@ -35,4 +35,4 @@ public:
     ~Shader();
 };
 
-#endif //CONFINED_SHADER_HPP
+#endif //RAMENGINE_SHADER_HPP

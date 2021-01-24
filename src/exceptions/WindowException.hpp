@@ -1,5 +1,5 @@
-#ifndef CONFINED_WINDOWEXCEPTION_HPP
-#define CONFINED_WINDOWEXCEPTION_HPP
+#ifndef RAMENGINE_WINDOWEXCEPTION_HPP
+#define RAMENGINE_WINDOWEXCEPTION_HPP
 
 #include "Exception.hpp"
 
@@ -8,4 +8,4 @@ public:
     WindowException(const char* message);
 };
 
-#endif //CONFINED_WINDOWEXCEPTION_HPP
+#endif //RAMENGINE_WINDOWEXCEPTION_HPP

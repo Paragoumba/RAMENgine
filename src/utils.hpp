@@ -1,5 +1,5 @@
-#ifndef CONFINED_UTILS_HPP
-#define CONFINED_UTILS_HPP
+#ifndef RAMENGINE_UTILS_HPP
+#define RAMENGINE_UTILS_HPP
 
 std::filesystem::path Utils::exePath;
 
@@ -24,4 +24,4 @@ std::string Utils::getPath(const char* path){
 }
 
 
-#endif //CONFINED_UTILS_HPP
+#endif //RAMENGINE_UTILS_HPP

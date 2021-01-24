@@ -1,5 +1,5 @@
-#ifndef CONFINED_ENGINE_HPP
-#define CONFINED_ENGINE_HPP
+#ifndef RAMENGINE_ENGINE_HPP
+#define RAMENGINE_ENGINE_HPP
 
 #include "Window.hpp"
 #include "GameLogic.hpp"
@@ -16,4 +16,4 @@ public:
     void loop();
 };
 
-#endif //CONFINED_ENGINE_HPP
+#endif //RAMENGINE_ENGINE_HPP

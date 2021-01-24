@@ -1,5 +1,5 @@
-#ifndef CONFINED_LOGGER_HPP
-#define CONFINED_LOGGER_HPP
+#ifndef RAMENGINE_LOGGER_HPP
+#define RAMENGINE_LOGGER_HPP
 
 #include <fstream>
 #include <memory>
@@ -41,4 +41,4 @@ namespace logger {
     };
 }
 
-#endif //CONFINED_LOGGER_HPP
+#endif //RAMENGINE_LOGGER_HPP

@@ -1,5 +1,5 @@
-#ifndef CONFINED_WINDOW_HPP
-#define CONFINED_WINDOW_HPP
+#ifndef RAMENGINE_WINDOW_HPP
+#define RAMENGINE_WINDOW_HPP
 
 class Window {
 public:
@@ -17,4 +17,4 @@ private:
     int m_height;
 };
 
-#endif //CONFINED_WINDOW_HPP
+#endif //RAMENGINE_WINDOW_HPP
