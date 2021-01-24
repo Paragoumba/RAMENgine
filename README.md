@@ -1,10 +1,11 @@
 # RAMENgine
-Pronounced RAM-engine or ramen.
+_Pronounced RAM-engine or ramen._
 
 This project aims to develop a cross-platform 3D game engine in C++.
 
 ## Goals
-- Cross-platform first
+- Aimed to make cross-platform game creation easy
 - OpenGL and Vulkan support
 - Support all 3 main PC OSes then phone OSes and consoles
-- 3D support first, 2D support might come later
+- 3D scenes support, 2D support could come later
+- Hand made API to create GUIs
