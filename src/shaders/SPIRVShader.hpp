@@ -1,5 +1,5 @@
-#ifndef CONFINED_SPIRVSHADER_HPP
-#define CONFINED_SPIRVSHADER_HPP
+#ifndef RAMENGINE_SPIRVSHADER_HPP
+#define RAMENGINE_SPIRVSHADER_HPP
 
 #include "Shader.hpp"
 
@@ -7,4 +7,4 @@ class SPIRVShader : public Shader {
 
 };
 
-#endif //CONFINED_SPIRVSHADER_HPP
+#endif //RAMENGINE_SPIRVSHADER_HPP

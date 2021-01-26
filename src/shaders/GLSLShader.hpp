@@ -1,5 +1,5 @@
-#ifndef CONFINED_GLSLSHADER_HPP
-#define CONFINED_GLSLSHADER_HPP
+#ifndef RAMENGINE_GLSLSHADER_HPP
+#define RAMENGINE_GLSLSHADER_HPP
 
 #include "Shader.hpp"
 #include "SPIRVShader.hpp"
@@ -9,4 +9,4 @@ public:
     SPIRVShader compile(bool optimize = true) const;
 };
 
-#endif //CONFINED_GLSLSHADER_HPP
+#endif //RAMENGINE_GLSLSHADER_HPP
