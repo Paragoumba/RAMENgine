@@ -9,7 +9,8 @@ add_library(RAMENgine
         exceptions/WindowException.cpp
         GameLogic.hpp
         backends/OpenGLBackend.cpp
-        Shader.cpp)
+        Shader.cpp
+        Mesh.cpp)
 #[[        shaders/Shader.cpp
         shaders/GLSLShader.cpp
         shaders/SPIRVShader.cpp)]]
