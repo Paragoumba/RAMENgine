@@ -11,9 +11,6 @@ add_library(RAMENgine
         backends/OpenGLBackend.cpp
         Shader.cpp
         Mesh.cpp)
-#[[        shaders/Shader.cpp
-        shaders/GLSLShader.cpp
-        shaders/SPIRVShader.cpp)]]
 
 target_include_directories(RAMENgine PUBLIC .)
 target_link_libraries(RAMENgine GLAD glfw GL)
