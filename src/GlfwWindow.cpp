@@ -6,6 +6,7 @@
 #include "Logger.hpp"
 
 using logger::Logger;
+using logger::Severity;
 using engine::GlfwWindow;
 
 GlfwWindow::GlfwWindow(const char* title, int width, int height) : Window(width, height){
@@ -14,8 +15,9 @@ GlfwWindow::GlfwWindow(const char* title, int width, int height) : Window(width,
 
     if (title == nullptr){
 
-        logger.logw("Argument title is null in Window constructor.\nUsing default value (\"\") instead.");
         title = "";
+        logger << Severity::WARNING << "Argument title is null in Window constructor.\nUsing default value ("
+        << title << ") instead.";
 
     }
 
