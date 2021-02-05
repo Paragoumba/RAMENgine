@@ -5,19 +5,24 @@
 
 #include "Window.hpp"
 
-class GlfwWindow : public Window {
-public:
-    GlfwWindow(const char* title, int width, int height);
+using engine::Window;
 
-    void setTitle(const char* title) override;
-    [[nodiscard]] bool shouldClose() const override;
-    void swapBuffers() const override;
-    void update() const override;
+namespace engine {
 
-    ~GlfwWindow();
+    class GlfwWindow : public Window {
+    public:
+        GlfwWindow(const char* title, int width, int height);
 
-private:
-    GLFWwindow* handle;
-};
+        void setTitle(const char* title) override;
+        [[nodiscard]] bool shouldClose() const override;
+        void swapBuffers() const override;
+        void update() const override;
+
+        ~GlfwWindow();
+
+    private:
+        GLFWwindow* handle;
+    };
+}
 
 #endif //RAMENGINE_GLFWWINDOW_HPP

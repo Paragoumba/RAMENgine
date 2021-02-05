@@ -4,16 +4,21 @@
 #include "Window.hpp"
 #include "GameLogic.hpp"
 
-class Engine {
-private:
-    int fps = 60;
-    Window* window;
-    GameLogicPtr gameLogicPtr;
+using engine::Window;
 
-public:
-    Engine(GameLogicPtr& gameLogicPtr);
+namespace engine {
 
-    void loop();
-};
+    class Engine {
+    private:
+        int fps = 60;
+        Window* window;
+        GameLogicPtr gameLogicPtr;
+
+    public:
+        Engine(GameLogicPtr& gameLogicPtr);
+
+        void loop();
+    };
+}
 
 #endif //RAMENGINE_ENGINE_HPP

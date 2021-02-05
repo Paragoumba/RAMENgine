@@ -6,6 +6,7 @@
 #include "Logger.hpp"
 
 using logger::Logger;
+using engine::GlfwWindow;
 
 GlfwWindow::GlfwWindow(const char* title, int width, int height) : Window(width, height){
 

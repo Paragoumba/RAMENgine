@@ -8,6 +8,8 @@
 using std::chrono::high_resolution_clock;
 using std::chrono::duration_cast;
 using std::chrono::nanoseconds;
+using engine::Engine;
+using engine::GlfwWindow;
 
 Engine::Engine(GameLogicPtr& gameLogicPtr) :
 gameLogicPtr(gameLogicPtr),
