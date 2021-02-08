@@ -24,14 +24,11 @@ namespace engine {
     };
 
     class Mesh {
-    private:
-        ID vboId, eboId;
-
     public:
         vector<Vertex> vertices;
         vector<ID> indices;
         vector<Texture> textures;
-        ID vaoId;
+        ID vaoId, vboId, eboId;
 
         Mesh(vector<Vertex>& vertices, vector<ID>& indices, vector<Texture>& textures, ID vaoID, ID vboId, ID eboId);
     };
