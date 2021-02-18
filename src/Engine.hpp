@@ -3,6 +3,7 @@
 
 #include "Window.hpp"
 #include "GameLogic.hpp"
+#include "backends/Backend.hpp"
 
 using engine::Window;
 
