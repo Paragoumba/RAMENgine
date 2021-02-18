@@ -10,7 +10,10 @@ add_library(RAMENgine
         GameLogic.hpp
         backends/OpenGLBackend.cpp
         Shader.cpp
-        Mesh.cpp)
+        Camera.cpp
+        interfaces/Positionable.cpp
+        interfaces/Rotationable.cpp
+        interfaces/Scalable.cpp)
 
 target_include_directories(RAMENgine PUBLIC .)
 target_link_libraries(RAMENgine GLAD glfw GL)
