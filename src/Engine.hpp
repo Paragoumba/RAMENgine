@@ -13,9 +13,10 @@ namespace engine {
         int fps = 60;
         Window* window;
         GameLogicPtr gameLogicPtr;
+        BackendPtr backendPtr;
 
     public:
-        Engine(GameLogicPtr& gameLogicPtr);
+        Engine(GameLogicPtr& gameLogicPtr, BackendPtr& backendPtr);
 
         void loop();
     };

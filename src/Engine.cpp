@@ -1,21 +1,22 @@
-#include <bits/types/struct_timespec.h>
 #include <chrono>
+#include <backends/Backend.hpp>
 
 #include "Engine.hpp"
 #include "GlfwWindow.hpp"
-#include "Logger.hpp"
 
 using std::chrono::high_resolution_clock;
 using std::chrono::duration_cast;
 using std::chrono::nanoseconds;
 using engine::Engine;
-using engine::GlfwWindow;
 
-Engine::Engine(GameLogicPtr& gameLogicPtr) :
+Engine::Engine(GameLogicPtr& gameLogicPtr, BackendPtr& backendPtr) :
 gameLogicPtr(gameLogicPtr),
-window(new GlfwWindow("Confined", 800, 600)){}
+backendPtr(backendPtr),
+window(new GlfwWindow("RAMENgine", 800, 600)){}
 
 void Engine::loop(){
+
+    gameLogicPtr->init();
 
     timespec waitingTime{0, 0};
     long waitingTimeNano = (long) (1.0 / fps * 1'000'000'000.0);
@@ -24,11 +25,16 @@ void Engine::loop(){
 
     while (!window->shouldClose()){
 
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        window->swapBuffers();
+        backendPtr->clear();
 
         auto loopStart = high_resolution_clock::now();
+
+        gameLogicPtr->input();
+        gameLogicPtr->update();
+        gameLogicPtr->render();
+
+        window->swapBuffers();
+        window->pollEvents();
 
         waitingTime.tv_nsec = waitingTimeNano -
                 duration_cast<nanoseconds>(
@@ -36,7 +42,6 @@ void Engine::loop(){
                         ).count();
 
         nanosleep(&waitingTime, nullptr);
-        window->update();
 
         ++i;
 
