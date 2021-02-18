@@ -17,6 +17,7 @@ namespace engine {
         [[nodiscard]] bool shouldClose() const override;
         void swapBuffers() const override;
         void pollEvents() const override;
+        void setSize(int width, int height) override;
 
         ~GlfwWindow();
 

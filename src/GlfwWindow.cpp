@@ -104,6 +104,16 @@ void GlfwWindow::pollEvents() const {
 
 }
 
+void GlfwWindow::setSize(int width, int height){
+
+    m_width = width;
+    m_height = height;
+
+    glfwSetWindowSize(handle, width, height);
+    glViewport(0, 0, width, height);
+
+}
+
 GlfwWindow::~GlfwWindow(){
 
     glfwTerminate();
