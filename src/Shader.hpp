@@ -14,6 +14,7 @@
 #define BUFFER_SIZE 1024
 
 using logger::Logger;
+using logger::Severity;
 
 class Shader {
 protected:

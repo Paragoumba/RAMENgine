@@ -33,12 +33,13 @@ Shader::Shader(const GLchar* vertexPath, const GLchar* fragmentPath){
 
     } catch (std::ifstream::failure& e){
 
-        logger.loge(e.what());
+        logger << Severity::ERROR << e.what();
 
     }
 
     const char* vertexCodeStr = vertexCode.c_str();
     const char* fragmentCodeStr = fragmentCode.c_str();
+
     unsigned int vertexId, fragmentId;
 
     vertexId = glCreateShader(GL_VERTEX_SHADER);
@@ -104,6 +105,7 @@ void Shader::checkCompileErrors(unsigned int shader, int type){
 
     int success;
     char buffer[BUFFER_SIZE];
+    Logger& logger = Logger::getLogger();
 
     if (type != PROGRAM){
 
@@ -112,13 +114,19 @@ void Shader::checkCompileErrors(unsigned int shader, int type){
         if (!success){
 
             glGetShaderInfoLog(shader, BUFFER_SIZE, nullptr, buffer);
-            //logger.logw(std::string("Cannot link shader (") + type + ") for the following reason:\n\t" + buffer);
+            logger << logger::Severity::ERROR << std::string("Cannot link shader (" + std::to_string(type) + ") for the following reason:\n\t" + buffer);
 
         }
 
     } else {
 
+        glGetProgramiv(shader, GL_LINK_STATUS, &success);
 
+        if (!success){
 
+            glGetProgramInfoLog(shader, 1024, nullptr, buffer);
+            logger << logger::Severity::ERROR << std::string("ERROR: Cannot link shader (" + std::to_string(type) + ") for the following reason:\n" + buffer);
+
+        }
     }
 }

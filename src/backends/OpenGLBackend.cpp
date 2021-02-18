@@ -22,6 +22,13 @@ MeshPtr OpenGLBackend::createMesh(vector<Vertex>& vertices, vector<Index>& indic
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, eboId);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(Index), indices.data(), GL_STATIC_DRAW);
 
+    /*glGenBuffers(1, &vboId);
+    vboIds.push_back(vboId);
+    glBindBuffer(GL_ARRAY_BUFFER, vboId);
+    glBufferData(GL_ARRAY_BUFFER, texCoordsNumber, texCoords, GL_STATIC_DRAW);
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), nullptr);
+    glEnableVertexAttribArray(1);*/
+
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), nullptr);
 
