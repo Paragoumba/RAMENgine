@@ -7,10 +7,10 @@ namespace engine {
 
     class GameLogic {
     public:
-        virtual void init() = 0;
-        virtual void input() = 0;
-        virtual void update() = 0;
-        virtual void render() const = 0;
+        virtual void init(){}
+        virtual void input(){}
+        virtual void update(){}
+        virtual void render() const {}
     };
 }
 
