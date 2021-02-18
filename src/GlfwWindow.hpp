@@ -16,7 +16,7 @@ namespace engine {
         void setTitle(const char* title) override;
         [[nodiscard]] bool shouldClose() const override;
         void swapBuffers() const override;
-        void update() const override;
+        void pollEvents() const override;
 
         ~GlfwWindow();
 

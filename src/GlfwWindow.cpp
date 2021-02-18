@@ -98,7 +98,7 @@ void GlfwWindow::swapBuffers() const {
 
 }
 
-void GlfwWindow::update() const{
+void GlfwWindow::pollEvents() const {
 
     glfwPollEvents();
 

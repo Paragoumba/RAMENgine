@@ -10,7 +10,7 @@ namespace engine {
         virtual void setTitle(const char* title) = 0;
         [[nodiscard]] virtual bool shouldClose() const = 0;
         virtual void swapBuffers() const = 0;
-        virtual void update() const = 0;
+        virtual void pollEvents() const = 0;
 
         ~Window();
 
