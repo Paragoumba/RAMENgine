@@ -26,11 +26,11 @@ namespace engine {
     class Mesh {
     public:
         vector<Vertex> vertices;
-        vector<ID> indices;
+        vector<Index> indices;
         vector<Texture> textures;
         ID vaoId, vboId, eboId;
 
-        Mesh(vector<Vertex>& vertices, vector<ID>& indices, vector<Texture>& textures, ID vaoID, ID vboId, ID eboId);
+        Mesh(vector<Vertex>& vertices, vector<Index>& indices, vector<Texture>& textures, ID vaoID, ID vboId, ID eboId);
     };
 }
 
