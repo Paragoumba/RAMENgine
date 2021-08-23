@@ -21,4 +21,6 @@ namespace engine {
     };
 }
 
+typedef std::shared_ptr<engine::Window> WindowPtr;
+
 #endif //RAMENGINE_WINDOW_HPP

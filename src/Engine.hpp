@@ -12,7 +12,7 @@ namespace engine {
     class Engine {
     private:
         int fps = 60;
-        Window* window;
+        WindowPtr window;
         GameLogicPtr gameLogicPtr;
         BackendPtr backendPtr;
 
