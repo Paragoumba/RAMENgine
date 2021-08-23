@@ -17,10 +17,10 @@ MeshPtr OpenGLBackend::createMesh(vector<Vertex>& vertices, vector<Index>& indic
     glBindVertexArray(vaoId);
 
     glBindBuffer(GL_ARRAY_BUFFER, vboId);
-    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), vertices.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, (long) (vertices.size() * sizeof(Vertex)), vertices.data(), GL_STATIC_DRAW);
 
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, eboId);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(Index), indices.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, (long) (indices.size() * sizeof(Index)), indices.data(), GL_STATIC_DRAW);
 
     /*glGenBuffers(1, &vboId);
     vboIds.push_back(vboId);
@@ -56,7 +56,7 @@ void OpenGLBackend::renderMesh(MeshPtr mesh) const {
     }
 
     glBindVertexArray(mesh->vaoId);
-    glDrawElements(GL_TRIANGLES, mesh->indices.size(), GL_UNSIGNED_INT, nullptr) ;
+    glDrawElements(GL_TRIANGLES, (int) mesh->indices.size(), GL_UNSIGNED_INT, nullptr);
 
 }
 
@@ -93,7 +93,7 @@ Texture OpenGLBackend::createTexture(const char* path, unsigned char* data, int 
 
     if (data){
 
-        const GLenum format = nbChannels == 4 ? GL_RGBA : GL_RGB;
+        const GLint format = nbChannels == 4 ? GL_RGBA : GL_RGB;
 
         glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
         glGenerateMipmap(GL_TEXTURE_2D);
