@@ -14,6 +14,8 @@ namespace engine {
         virtual void swapBuffers() const = 0;
         virtual void pollEvents() const = 0;
         virtual void setSize(int width, int height) = 0;
+        [[nodiscard]] int getWidth() const;
+        [[nodiscard]] int getHeight() const;
 
         ~Window();
 
