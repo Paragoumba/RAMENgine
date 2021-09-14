@@ -1,6 +1,8 @@
 #ifndef RAMENGINE_WINDOW_HPP
 #define RAMENGINE_WINDOW_HPP
 
+#include <memory>
+
 namespace engine {
 
     class Window {
