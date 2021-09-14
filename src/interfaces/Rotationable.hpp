@@ -13,7 +13,7 @@ namespace engine {
     public:
         Rotationable();
 
-        [[nodiscard]] vec3 getRotation() const;
+        [[nodiscard]] vec3& getRotation();
 
         void setRotation(float rx, float ry, float rz);
         void setRotation(vec3 rotation);

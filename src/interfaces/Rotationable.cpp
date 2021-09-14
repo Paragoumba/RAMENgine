@@ -4,7 +4,7 @@ using engine::Rotationable;
 
 Rotationable::Rotationable(): rotation(0){}
 
-vec3 Rotationable::getRotation() const {
+vec3& Rotationable::getRotation(){
 
     return rotation;
 
