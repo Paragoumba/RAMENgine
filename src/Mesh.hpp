@@ -7,6 +7,8 @@
 #include <glm/vec2.hpp>
 
 using std::vector;
+using glm::vec2;
+using glm::vec3;
 
 typedef unsigned int ID;
 typedef unsigned int Index;
@@ -14,9 +16,9 @@ typedef unsigned int Index;
 namespace engine {
 
     struct Vertex {
-        glm::vec3 position;
-        glm::vec3 normal;
-        glm::vec2 texCoords;
+        vec3 position;
+        vec3 normal;
+        vec2 texCoords;
     };
 
     struct Texture {
