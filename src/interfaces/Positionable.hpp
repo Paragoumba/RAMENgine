@@ -13,13 +13,13 @@ namespace engine {
     public:
         Positionable();
 
-        [[nodiscard]] vec3 getPosition() const;
+        [[nodiscard]] vec3& getPosition();
 
-        void setPosition(float x, float y, float z);
-        void setPosition(vec3 position);
+        virtual void setPosition(float x, float y, float z);
+        virtual void setPosition(vec3 position);
 
-        void move(float x, float y, float z);
-        void move(vec3 v);
+        virtual void move(float x, float y, float z);
+        virtual void move(vec3 v);
     };
 }
 

@@ -4,7 +4,7 @@ using engine::Positionable;
 
 Positionable::Positionable(): position(0){}
 
-vec3 Positionable::getPosition() const {
+vec3& Positionable::getPosition(){
 
     return position;
 

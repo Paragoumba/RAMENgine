@@ -2,6 +2,6 @@
 
 using engine::Renderer;
 
-void Renderer::render() const{
+void Renderer::render() const {
 
 }
