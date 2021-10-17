@@ -11,6 +11,7 @@ add_library(RAMENgine
         backends/OpenGLBackend.cpp
         Shader.cpp
         Camera.cpp
+        Material.cpp
         interfaces/Positionable.cpp
         interfaces/Rotationable.cpp
         interfaces/Scalable.cpp)
