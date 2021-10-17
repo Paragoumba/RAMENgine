@@ -3,7 +3,10 @@
 #include "Engine.hpp"
 #include "GlfwWindow.hpp"
 
+ using std::chrono::time_point;
+using std::chrono::system_clock;
 using std::chrono::high_resolution_clock;
+using std::chrono::duration;
 using std::chrono::duration_cast;
 using std::chrono::nanoseconds;
 using engine::Engine;
@@ -15,13 +18,16 @@ window(new GlfwWindow("RAMENgine", 800, 600)){}
 
 void Engine::loop(){
 
-    gameLogicPtr->init();
+    gameLogicPtr->init(backendPtr);
 
     timespec waitingTime{0, 0};
     long waitingTimeNano = (long) (1.0 / fps * 1'000'000'000.0);
-    double lastLoopTime = glfwGetTime();
+    auto lastLoopTime = high_resolution_clock::now();
+    double lastFPSDisplayTime = glfwGetTime();
+    time_point startTime = system_clock::now();
     int i = 0;
 
+    // TODO Make the loop deterministic
     while (!window->shouldClose()){
 
         backendPtr->clear();
@@ -42,11 +48,13 @@ void Engine::loop(){
 
         nanosleep(&waitingTime, nullptr);
 
+        lastLoopTime = high_resolution_clock::now();
+
         ++i;
 
-        if (glfwGetTime() - lastLoopTime >= 1){
+        if (glfwGetTime() - lastFPSDisplayTime >= 1){
 
-            lastLoopTime = glfwGetTime();
+            lastFPSDisplayTime = glfwGetTime();
             window->setTitle((std::string() + std::to_string(i) + "FPS").c_str());
             i = 0;
 
