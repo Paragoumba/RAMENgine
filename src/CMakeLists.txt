@@ -12,6 +12,7 @@ add_library(RAMENgine
         Shader.cpp
         Camera.cpp
         Material.cpp
+        Object.cpp
         interfaces/Positionable.cpp
         interfaces/Rotationable.cpp
         interfaces/Scalable.cpp)
