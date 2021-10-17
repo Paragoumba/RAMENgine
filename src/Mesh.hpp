@@ -23,6 +23,7 @@ namespace engine {
 
     struct Texture {
         ID id;
+        const char* path;
     };
 
     class Mesh {
