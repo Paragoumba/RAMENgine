@@ -2,15 +2,16 @@
 #define ENGINE_GAMELOGIC_HPP
 
 #include <memory>
+#include <backends/Backend.hpp>
 
 namespace engine {
 
     class GameLogic {
     public:
-        virtual void init(){}
+        virtual void init(BackendPtr& backendPtr){}
         virtual void input(){}
-        virtual void update(){}
-        virtual void render() const {}
+        virtual void update(double delta){}
+        virtual void render(BackendPtr& backendPtr) const {}
     };
 }
 

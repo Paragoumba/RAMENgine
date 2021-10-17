@@ -35,8 +35,9 @@ void Engine::loop(){
         auto loopStart = high_resolution_clock::now();
 
         gameLogicPtr->input();
-        gameLogicPtr->update();
-        gameLogicPtr->render();
+
+        gameLogicPtr->update(duration<double>(loopStart - lastLoopTime).count());
+        gameLogicPtr->render(backendPtr);
 
         window->swapBuffers();
         window->pollEvents();
