@@ -61,3 +61,15 @@ void Engine::loop(){
         }
     }
 }
+
+BackendPtr engine::Engine::getBackend() const {
+
+    return backendPtr;
+
+}
+
+WindowPtr engine::Engine::getWindow() const {
+
+    return window;
+
+}

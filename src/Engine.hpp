@@ -19,6 +19,9 @@ namespace engine {
     public:
         Engine(GameLogicPtr& gameLogicPtr, BackendPtr& backendPtr);
 
+        [[nodiscard]] BackendPtr getBackend() const;
+        [[nodiscard]] WindowPtr getWindow() const;
+
         void loop();
     };
 }
