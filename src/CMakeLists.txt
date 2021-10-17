@@ -13,6 +13,7 @@ add_library(RAMENgine
         Camera.cpp
         Material.cpp
         Object.cpp
+        Mesh.cpp
         interfaces/Positionable.cpp
         interfaces/Rotationable.cpp
         interfaces/Scalable.cpp)
