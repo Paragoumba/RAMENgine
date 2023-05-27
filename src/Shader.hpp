@@ -1,7 +1,7 @@
 #ifndef RAMENGINE_SHADER_HPP
 #define RAMENGINE_SHADER_HPP
 
-#include <glad/glad.h>
+#include "../libs/glad/gl.h"
 #include <glm/glm.hpp>
 #include <string>
 

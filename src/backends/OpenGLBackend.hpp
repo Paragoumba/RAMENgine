@@ -1,7 +1,7 @@
 #ifndef RAMENGINE_OPENGLBACKEND_HPP
 #define RAMENGINE_OPENGLBACKEND_HPP
 
-#include <glad/glad.h>
+#include "../../libs/glad/gl.h"
 
 #include "backends/Backend.hpp"
 

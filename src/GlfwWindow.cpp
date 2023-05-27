@@ -1,4 +1,4 @@
-#include <glad/glad.h>
+#include "../libs/glad/gl.h"
 #include <GLFW/glfw3.h>
 
 #include "GlfwWindow.hpp"
@@ -31,7 +31,7 @@ GlfwWindow::GlfwWindow(const char* title, int width, int height) : Window(width,
 
     glfwMakeContextCurrent(handle);
 
-    if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)){
+    if (!gladLoadGL(glfwGetProcAddress)){
 
         glfwTerminate();
 
